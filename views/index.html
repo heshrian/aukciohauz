@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aukcziojo</title>
+</head>
+
+<body>
+    <ul>
+
+    </ul>
+    <form class="bid" method="POST" action="/api/items">
+        <label for="select">Name</label>
+        <select>
+            <option>Select an item</option>
+        </select>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required placeholder="What is your name dummy?">
+        <label for="Amount">Amount</label>
+        <input id="amount" name="amount" type="text" required placeholder="Number!!">
+        <input type="submit" value="Bid your soul away">
+    </form>
+    <form class="new" method="POST" action="/api/items/new">
+        <label for="item">New item</label>
+        <input id="item" name="item" type="text" placeholder="New item's name" required>
+        <label for="expiryDate">Expiry date</label>
+        <input id="expiryDate" name="expiryDate" type="text" placeholder="YYYY-MM-DD HH-MM-SS" required>
+        <label for="highestBid">Bid start</label>
+        <input id="highestBid" name="highestBid" type="text" placeholder="0" required>
+        <input type="submit" value="Add new item">
+    </form>
+    <button>Delete</button>
+    <script src="./main.js"></script>
+</body>
+
+</html>
