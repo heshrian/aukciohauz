@@ -1,12 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage ('build') {
             steps {
                 echo 'building..'
                 sh 'docker build -t auction/house .'
             }
-        }stage ('test') {
+        } 
+        stage ('test') {
             steps {
                 sh 'node test.js'
             }

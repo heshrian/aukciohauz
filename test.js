@@ -1,7 +1,7 @@
 function test() {
   if (1 === 1) {
-    // return `1=1`
+    console.log('yes')
+  } else {
+    console.log('nope')
   }
 }
-
-// console.log(test())

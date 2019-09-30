@@ -4,7 +4,6 @@ const express = require('express');
 const PORT = 4444;
 const mysql = require('mysql');
 
-
 const connection = mysql.createConnection({
   host: process.env.MYSQL_HOST,
   user: process.env.MYSQL_USER,
@@ -89,4 +88,3 @@ app.delete('/api/items/delete', (req, res) => {
 app.listen(PORT, () => {
   console.log(`App is listening on ${PORT}`);
 });
-
