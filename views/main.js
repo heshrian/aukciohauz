@@ -1,4 +1,5 @@
 'use strict';
+
 const select = document.querySelector('select');
 const ul = document.querySelector('ul');
 const formBid = document.querySelector('.bid');
@@ -6,7 +7,6 @@ const formInput = document.querySelector('.new');
 const bider = document.getElementById('name');
 const bid = document.getElementById('amount');
 const btn = document.querySelector('button')
-
 
 window.onload = function loadData() {
   fetch('/api/items')
@@ -66,8 +66,8 @@ formInput.addEventListener('submit', e => {
       window.location.reload();
     })
 })
+
 btn.addEventListener('click', e => {
-  // e.preventDefault();
   fetch('api/items/delete', {
     method: 'DELETE',
     body: JSON.stringify({ id: select.value }),
