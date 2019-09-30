@@ -4,7 +4,6 @@ const express = require('express');
 const PORT = 4444;
 const mysql = require('mysql');
 
-
 const connection = mysql.createConnection({
   host: process.env.MYSQL_HOST,
   user: process.env.MYSQL_USER,
