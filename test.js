@@ -1,7 +1,8 @@
 function test() {
   if (1 === 1) {
-    // return `1=1`
+
+  } else {
+    throw new Error
   }
 }
 
-// console.log(test())
