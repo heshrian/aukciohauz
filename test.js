@@ -5,4 +5,3 @@ function test() {
     throw new Error
   }
 }
-
