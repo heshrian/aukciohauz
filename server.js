@@ -11,7 +11,25 @@ const connection = mysql.createConnection({
   database: process.env.MYSQL_DATABASE
 });
 
-connection.connect(console.log)
+function initializer() {
+  return new Promise((resolve, reject) => {
+    connection.connect(function (err) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve('Connection with database is established');
+      }
+    });
+  });
+}
+
+
+initializer()
+  .then(console.log)
+  .then(()=> {
+    app.listen(PORT, () => console.log(`It's running on ${PORT}`))
+  })
+  .catch(console.log)
 
 const app = express();
 app.use(express.json());
@@ -85,6 +103,6 @@ app.delete('/api/items/delete', (req, res) => {
   })
 })
 
-app.listen(PORT, () => {
-  console.log(`App is listening on ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`App is listening on ${PORT}`);
+// });
