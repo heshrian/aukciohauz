@@ -1,9 +1,9 @@
-function test() {
-  if (1 === 1) {
+function test(i) {
+  if (i === 1) {
     console.log('yes')
   } else {
     throw new Error
   }
 }
 
-test()
+test(2)
