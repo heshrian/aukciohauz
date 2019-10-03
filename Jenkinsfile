@@ -12,5 +12,10 @@ pipeline {
                 sh 'node test.js'
             }
         }
+        stage ('push to docker hub'){
+            steps {
+                sh ''
+            }
+        }
     }
 }
