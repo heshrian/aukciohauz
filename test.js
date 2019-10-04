@@ -6,5 +6,4 @@ function test(i) {
   }
 }
 
-
 test(2)
